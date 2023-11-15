@@ -4,6 +4,10 @@ description: 'Run a shell script'
 runs:
   using: "composite"
   steps:
+
+    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH    ## kijk of dit nodig is voor de shell te kunnen runnen... 
+      shell: bash
+
     - run: tims-script.sh
       shell: bash
 
