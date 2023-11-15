@@ -1,0 +1,16 @@
+name: greet-based-on-input
+description: 'Greet someone'
+
+inputs:
+  who-to-greet:  
+    description: 'Who to greet'
+    required: true
+    default: 'Tim'
+
+runs:
+  using: "composite"
+  steps:
+    - run: echo "Hello ${{ inputs.who-to-greet }}"
+      shell: bash
+
+
