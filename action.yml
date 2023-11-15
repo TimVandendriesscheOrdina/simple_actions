@@ -3,14 +3,14 @@ description: 'Greet someone'
 
 outputs:
   random-number:
-    description: "Random number"
-    value: ${{ steps.rng-number.outputs.random-number }}
+    description: "Return Some Text As Demo"
+    value: ${{ steps.tim-bragging.outputs.concrete-brag }}
 
 runs:
   using: "composite"
   steps:
-    - id: rng-number
-      run: echo "Generated Number $(echo $RANDOM)" >> $GITHUB_OUTPUT    # we mappen het gegenereerde getal naar de output variabele
+    - id: tim-bragging
+      run: echo "concrete-brag=Tim Is Slim" >> $GITHUB_OUTPUT    # we mappen het gegenereerde getal naar de output variabele
       shell: bash
 
 
