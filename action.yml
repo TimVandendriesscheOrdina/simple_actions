@@ -2,7 +2,7 @@ name: greet-based-on-input
 description: 'Greet someone'
 
 outputs:
-  random-number:
+  tim-likes-to-brag:
     description: "Return Some Text As Demo"
     value: ${{ steps.tim-bragging.outputs.concrete-brag }}
 
