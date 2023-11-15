@@ -1,22 +1,30 @@
 name: greet-based-on-input
 description: 'Greet someone'
 
-inputs:
-  who-to-greet:  
-    description: 'Who to greet'
-    required: true
-    default: 'Tim'
+outputs:
+  random-number:
+    description: "Random number"
+    value: ${{ steps.rng-number.outputs.random-number }}
 
 runs:
   using: "composite"
   steps:
-    - run: echo "Hello ${{ inputs.who-to-greet }}"
+    - id: rng-number
+      run: echo "Generated Number $(echo $RANDOM)" >> $GITHUB_OUTPUT    # we mappen het gegenereerde getal naar de output variabele
       shell: bash
 
 
-
+    # - run: echo "Hello ${{ inputs.who-to-greet }}"
+    #   shell: bash
 
 
 
     # - run: echo "Hello ${{ inputs.who-to-greet }}"
     #   shell: bash
+
+
+  #   inputs:
+  # who-to-greet:  
+  #   description: 'Who to greet'
+  #   required: true
+  #   default: 'Tim'
