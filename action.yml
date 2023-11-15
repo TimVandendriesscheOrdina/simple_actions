@@ -1,27 +1,29 @@
-name: greet-based-on-input
-description: 'Greet someone'
-
-outputs:
-  tim-likes-to-brag:
-    description: "Return Some Text As Demo"
-    value: ${{ steps.tim-bragging.outputs.concrete-brag }}
+name: run-shell-script
+description: 'Run a shell script'
 
 runs:
   using: "composite"
   steps:
-    - id: tim-bragging
-      run: echo "concrete-brag=Tim Is Slim" >> $GITHUB_OUTPUT    # we mappen het gegenereerde getal naar de output variabele
+    - run: tims-script.sh
       shell: bash
 
+    # - run: echo "Hello ${{ inputs.who-to-greet }}"
+    #   shell: bash
+
+
+    # - id: tim-bragging
+    #   run: echo "concrete-brag=Tim Is Slim" >> $GITHUB_OUTPUT    # we mappen het gegenereerde getal naar de output variabele
+    #   shell: bash
 
     # - run: echo "Hello ${{ inputs.who-to-greet }}"
     #   shell: bash
 
 
 
-    # - run: echo "Hello ${{ inputs.who-to-greet }}"
-    #   shell: bash
-
+# outputs:
+#   tim-likes-to-brag:
+#     description: "Return Some Text As Demo"
+#     value: ${{ steps.tim-bragging.outputs.concrete-brag }}
 
   #   inputs:
   # who-to-greet:  
