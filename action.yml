@@ -18,8 +18,9 @@ runs:
       run: chmod +x second-script.sh
       shell: bash
 
-    - run: second-script.sh
+    - name: run second script
       working-directory: ./scripts
+      run: second-script.sh
       shell: bash
 
     # - run: echo "Hello ${{ inputs.who-to-greet }}"
