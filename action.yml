@@ -19,7 +19,7 @@ runs:
       shell: bash
 
     - run: second-script.sh
-      working-directory: ./
+      working-directory: ./scripts
       shell: bash
 
     # - run: echo "Hello ${{ inputs.who-to-greet }}"
