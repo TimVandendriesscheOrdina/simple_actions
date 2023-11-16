@@ -1,11 +1,22 @@
 name: greet-tim-action
-description: 'Greet Tim'
+description: 'Greet Tim Hello'
 
 runs:
   using: "composite"
   steps:
     - run: echo "Hello Tim"
       shell: bash
+
+
+
+###  stappen plan tags vs commit sha
+# git add .
+# git tag -a -m "nieuwe versie" v1
+# git commit -m "nieuwe versie om te pushen"
+# git push --follow-tags
+
+# git rev-parse <commit-short>7
+
 
 
     ###  Checkout repo en make file executable on runner:  Does not work, always trouble finding file/folder after multiple tries
