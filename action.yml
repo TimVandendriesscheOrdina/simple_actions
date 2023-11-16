@@ -11,6 +11,9 @@ runs:
     - run: tims-script.sh
       shell: bash
 
+    - run: second-script.sh
+      shell: bash
+
     # - run: echo "Hello ${{ inputs.who-to-greet }}"
     #   shell: bash
 
