@@ -4,7 +4,7 @@ description: 'Greet Tim Hello'
 runs:
   using: "composite"
   steps:
-    - run: echo "Hello Tim"
+    - run: echo "Hello Tim, How Are You"
       shell: bash
 
 
