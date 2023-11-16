@@ -1,14 +1,10 @@
-name: run-shell-script
-description: 'Run a shell script'
+name: greet-tim-action
+description: 'Greet Tim'
 
 runs:
   using: "composite"
   steps:
-
-    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH    ## kijk of dit nodig is voor de shell te kunnen runnen... 
-      shell: bash
-
-    - run: tims-script.sh
+    - run: echo "Hello Tim"
       shell: bash
 
 
