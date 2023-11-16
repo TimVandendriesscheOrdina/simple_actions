@@ -11,6 +11,9 @@ runs:
     - run: tims-script.sh
       shell: bash
 
+    - name: Checkout Repo So We Can Make File Executable
+      uses: actions/checkout@v4
+
     - name: Make Second Script Executable
       run: chmod +x second-script.sh
       shell: bash
