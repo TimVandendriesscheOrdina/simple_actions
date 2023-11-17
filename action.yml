@@ -9,32 +9,8 @@ runs:
 
 
 
-###  stappen plan tags vs commit sha
-# git add .
-# git tag -a -m "nieuwe versie" v1
-# git commit -m "nieuwe versie om te pushen"
-# git push --follow-tags
-
-# git rev-parse <commit-short>
-
-## in this sequence we don't update the V-upgraded tag with the latest info, only next push onwards it gets boosted
-
-
-
-# New Sequence to try:
-# git add .
-# git tag -a -m "nieuwe versie" v1
-# git commit -m "nieuwe versie om te pushen"
-# git push                                     ## added as extra step in between... 
-# git push --follow-tags
-
-# git rev-parse <commit-short>
-
-## in this sequence we STILL don't update the V-upgraded tag with the latest info, only next push onwards it gets boosted
-
-
 #####################################
-# Third Sequence to try:
+# Third Sequence to try:  -- CORRECT
 # git add .
 # git commit -m "nieuwe versie om te pushen"
 
