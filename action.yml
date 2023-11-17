@@ -1,59 +1,8 @@
-name: greet-tim-action
-description: 'Greet Tim Hello'
+name: greet-tom-action
+description: 'Greet Tom Hello'
 
 runs:
   using: "composite"
   steps:
-    - run: echo "Hello Tim!"
+    - run: echo "Hello Tom!"
       shell: bash
-
-
-
-#####################################
-# Third Sequence to try:  -- CORRECT
-# git add .
-# git commit -m "nieuwe versie om te pushen"
-
-# git tag -a -m "nieuwe versie" v5
-                                            ## added as extra step in between...   # git push  
-# git push --follow-tags
-
-# git rev-parse <commit-short>
-######################################
-
-
-    ###  Checkout repo en make file executable on runner:  Does not work, always trouble finding file/folder after multiple tries
-    # - name: Checkout Repo So We Can Make File Executable
-    #   uses: actions/checkout@v4
-
-    # - name: Make Second Script Executable
-    #   run: chmod +x second-script.sh
-    #   shell: bash
-
-    # - name: run second script
-    #   run: ./scripts/second-script.sh
-    #   shell: bash
-
-    # - run: echo "Hello ${{ inputs.who-to-greet }}"
-    #   shell: bash
-
-
-    # - id: tim-bragging
-    #   run: echo "concrete-brag=Tim Is Slim" >> $GITHUB_OUTPUT    # we mappen het gegenereerde getal naar de output variabele
-    #   shell: bash
-
-    # - run: echo "Hello ${{ inputs.who-to-greet }}"
-    #   shell: bash
-
-
-
-# outputs:
-#   tim-likes-to-brag:
-#     description: "Return Some Text As Demo"
-#     value: ${{ steps.tim-bragging.outputs.concrete-brag }}
-
-  #   inputs:
-  # who-to-greet:  
-  #   description: 'Who to greet'
-  #   required: true
-  #   default: 'Tim'
