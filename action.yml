@@ -4,7 +4,7 @@ description: 'Greet Tim Hello'
 runs:
   using: "composite"
   steps:
-    - run: echo "Hello Tim, How Are You Doing Today?"
+    - run: echo "Hello Tim!"
       shell: bash
 
 
@@ -25,13 +25,25 @@ runs:
 # git add .
 # git tag -a -m "nieuwe versie" v1
 # git commit -m "nieuwe versie om te pushen"
-# git push
+# git push                                     ## added as extra step in between... 
 # git push --follow-tags
 
 # git rev-parse <commit-short>
 
+## in this sequence we STILL don't update the V-upgraded tag with the latest info, only next push onwards it gets boosted
 
 
+#####################################
+# Third Sequence to try:
+# git add .
+# git commit -m "nieuwe versie om te pushen"
+
+# git tag -a -m "nieuwe versie" v5
+                                            ## added as extra step in between...   # git push  
+# git push --follow-tags
+
+# git rev-parse <commit-short>
+######################################
 
 
     ###  Checkout repo en make file executable on runner:  Does not work, always trouble finding file/folder after multiple tries
